@@ -12,7 +12,7 @@ def insert_data_to_sql(filename, name_table):
     try:
         with open(filename, 'r', encoding='UTF-8') as csvfile:
             data = csv.DictReader(csvfile, delimiter=',')
-            with psycopg2.connect(host='localhost', database='north', user='postgres', password='romadoma25') as conn:
+            with psycopg2.connect(host='localhost', database='north', user='postgres', password='1707') as conn:
                 with conn.cursor() as curs:
                     for row in data:
                         row_data = []
